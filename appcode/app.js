@@ -37,6 +37,10 @@ const session = expressSession({
 
 app.use(session);
 
+app.get("/",(req,res) => {
+    res.send("test")
+})
+
 var server = require("http").createServer(app);
 
 server.listen(5000, () => {

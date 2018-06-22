@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  gsite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: "npm start"
+    command: nodemon
+    links:
+      - redis
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./appcode:/usr/src/app
+  redis:
+    image: "redis"
+    command: /bin/bash -c "redis-server"

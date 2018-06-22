@@ -31,7 +31,7 @@ app.use(methodOverride("_method"));
 
 //setup session / passport
 const session = expressSession({
-    secret:"hello", //TODO change me
+    secret:"hello", //TODO: change me
     resave:false,
     saveUninitialized:false
 });

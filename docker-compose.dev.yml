@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-  gsite:
+  node-site:
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,7 +12,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./appcode:/usr/src/app
+      - ./appcode:/usr/src/app/
   redis:
     image: "redis"
     command: /bin/bash -c "redis-server"

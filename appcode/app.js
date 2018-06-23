@@ -5,9 +5,7 @@ const expressSession = require("express-session");
 const flash = require("connect-flash");
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
-const passport = require("passport");
 const path = require("path");
-
 
 //create app
 const app = express();
@@ -28,7 +26,7 @@ app.use(bodyParser.json());
 //setup method override (allows put and delete)
 app.use(methodOverride("_method"));
 
-//setup session / passport
+//setup session
 const session = expressSession({
     secret:"hello", //TODO: change me
     resave:false,
@@ -37,8 +35,8 @@ const session = expressSession({
 
 app.use(session);
 
-app.get("/",(req,res) => {
-    res.send("test")
+app.get("/", (req,res) => {
+    res.send("Howdy")
 })
 
 var server = require("http").createServer(app);

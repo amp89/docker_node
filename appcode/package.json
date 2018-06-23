@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "node-docker-boilerplate",
   "version": "1.0.0",
-  "description": "Boiler Plate - express / handlebars",
+  "description": "Boiler Plate - docker/ express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,11 +18,6 @@
     "express-session": "^1.15.6",
     "method-override": "^2.3.10",
     "moment": "^2.19.3",
-    "mongoose": "^4.13.6",
-    "nodemailer": "^4.4.1",
-    "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0",
-    "passport-local": "^1.0.0",
     "redis": "^2.8.0",
     "socket.io": "^2.0.4",
     "socket.io-express-session": "^0.1.3"

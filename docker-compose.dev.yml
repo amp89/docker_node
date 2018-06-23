@@ -2,6 +2,7 @@ version: "2"
 
 services:
   node-site:
+    env_file: dev.env
     build:
       context: .
       dockerfile: Dockerfile

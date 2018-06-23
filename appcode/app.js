@@ -7,6 +7,8 @@ const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
 const path = require("path");
 
+const settings = require("./config/settings")
+
 //create app
 const app = express();
 
@@ -15,6 +17,16 @@ app.use(flash());
 
 //setup static/public file path
 app.use(express.static(path.join(__dirname,"public")));
+
+//set engine to handlebars
+app.engine("handlebars", handlebars(
+    {
+        helpers:{},
+        // defaultLayout:"main"
+    }
+));
+
+app.set("view engine","handlebars");
 
 //setup cookie parser
 app.use(cookieParser());
@@ -27,8 +39,9 @@ app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 
 //setup session
+console.log(settings.secret);
 const session = expressSession({
-    secret:"hello", //TODO: change me
+    secret:settings.secret,
     resave:false,
     saveUninitialized:false
 });
@@ -36,7 +49,7 @@ const session = expressSession({
 app.use(session);
 
 app.get("/", (req,res) => {
-    res.send("Howdy")
+    res.render("index");
 })
 
 var server = require("http").createServer(app);

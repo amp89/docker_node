@@ -16,6 +16,6 @@ Simple Node/Docker boilerplate, no auth.  Express/socker.io
   - .dockerignore
   - .gitignore
 
-# Using
+# Use
   - docker-compose -f docker-compose.dev.yml up
     - (add "--build" to build)

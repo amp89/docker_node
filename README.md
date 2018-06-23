@@ -1,6 +1,6 @@
-# Simple Node/Express/Docker Boilerplate code
+# Simple Node/Express/Redis Docker Boilerplate code
 
-Simple Node/Docker boilerplate, no auth.  Express/socker.io
+Simple Node/Docker boilerplate, with redis. no auth.  Express/socker.io
 
 
 # File Structure

@@ -6,9 +6,16 @@ Simple Node/Docker boilerplate, no auth.  Express/socker.io
 # File Structure
 
   - appcode
-    - stuff
+    - app.js
+    - package-lock.json
+    - package.json
+    - redis_test.js
   - docker-compose.dev.yml
   - Dockerfile
   - README.md
   - .dockerignore
   - .gitignore
+
+# Using
+  - docker-compose -f docker-compose.dev.yml up
+    - (add "--build" to build)

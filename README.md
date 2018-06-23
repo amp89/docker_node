@@ -19,3 +19,4 @@ Simple Node/Docker boilerplate, no auth.  Express/socker.io
 # Use
   - docker-compose -f docker-compose.dev.yml up
     - (add "--build" to build)
+  - Exposes app on port 5000
